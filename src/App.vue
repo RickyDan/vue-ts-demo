@@ -1,18 +1,11 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
 export default {
-  created () {
-    axios.get('https://cnodejs.org/api/v1/topics').then(res => {
-      console.log(res.data)
-    })
-  }
 }
 </script>
 
