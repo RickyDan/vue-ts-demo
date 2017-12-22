@@ -6,8 +6,13 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-  name: 'app'
+  created () {
+    axios.get('https://cnodejs.org/api/v1/topics').then(res => {
+      console.log(res.data)
+    })
+  }
 }
 </script>
 
