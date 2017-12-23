@@ -7,5 +7,9 @@ export default {
     path: '/hello',
     name: 'Hello',
     component: () => import('../components/Hello.vue')
+  }, {
+    path: '/login',
+    name: 'Login',
+    component: () => import('../components/Login.vue')
   }]
 }
