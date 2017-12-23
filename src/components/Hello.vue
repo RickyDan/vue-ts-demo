@@ -15,7 +15,6 @@
 
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator'
-  import axios from 'axios'
   @Component
   export default class Hello extends Vue {
     name: string = 'Kawi'
@@ -26,12 +25,13 @@
       return `My name is ${this.name}`
     }
     created () {
-      this.getData()
+      console.log(this.$rest)
+      // this.getData()
     }
-
     async getData () {
-      const data = await axios.get('https://cnodejs.org/api/v1/topics?limit=10&page=5')
-      this.list = data.data.data
+      // const data = await this.$rest.index.getIndexInfo()
+      // console.log(data)
+      // this.list = data.data.data
     }
   }
 </script>
