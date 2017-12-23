@@ -20,18 +20,22 @@
     name: string = 'Kawi'
     date: string = ''
     data: Object = {}
+    params: Object = {
+      limit: 10,
+      tab: 'share',
+      page: 1
+    }
     list: Array<string> = []
     get MyName () :string {
       return `My name is ${this.name}`
     }
     created () {
-      console.log(this.$rest)
-      // this.getData()
+      this.getData()
     }
     async getData () {
-      // const data = await this.$rest.index.getIndexInfo()
-      // console.log(data)
-      // this.list = data.data.data
+      const obj: any = this.$rest
+      const data = await obj.index.getIndexInfo(this.params)
+      this.list = data.data
     }
   }
 </script>

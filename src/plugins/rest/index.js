@@ -1,7 +1,9 @@
+import config from '../../rest/config'
+
 export default class Rest {
   static install () {}
-  constructor (options = {}) {
-    Object.assign(this, options.rest)
+  constructor () {
+    Object.assign(this, config)
   }
 }
 

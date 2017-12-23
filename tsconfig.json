@@ -22,7 +22,7 @@
     "module": "esnext",
     "target": "es5",
     "moduleResolution": "node",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "lib": [
       "dom",
       "es2015",

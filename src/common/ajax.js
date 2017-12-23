@@ -92,7 +92,7 @@ class Ajax {
     if (typeof id === 'object') {
       let search = '?'
       let counter = 0
-      for (let key of id) {
+      for (let key in id) {
         if (counter) search += '&'
         search += key + '=' + id[key]
         counter++
