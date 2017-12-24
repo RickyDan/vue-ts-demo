@@ -7,8 +7,8 @@
     isLogin: boolean = false
     txt: string = '登录'
     getStatus ():void {
-      this.isLogin = true
-      this.txt = '注册'
+      this.isLogin = !this.isLogin
+      this.txt = this.isLogin ? '注册' : '登录'
       console.log(this.isLogin)
     }
     render (h: CreateElement) {
