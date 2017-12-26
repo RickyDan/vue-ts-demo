@@ -4,10 +4,6 @@ export default {
     name: 'HelloWorld',
     component: () => import('../components/HelloWorld.vue')
   }, {
-    path: '/hello',
-    name: 'Hello',
-    component: () => import('../components/Hello.vue')
-  }, {
     path: '/login',
     name: 'Login',
     component: () => import('../components/Login.vue')

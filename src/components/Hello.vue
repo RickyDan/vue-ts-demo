@@ -14,7 +14,9 @@
 </template>
 
 <script lang="ts">
-  import { Component, Vue } from 'vue-property-decorator'
+  import Vue from 'vue'
+  import Component from 'vue-class-component'
+
   @Component
   export default class Hello extends Vue {
     name: string = 'Kawi'
@@ -30,12 +32,12 @@
       return `My name is ${this.name}`
     }
     created () {
-      this.getData()
+      // this.getData()
     }
-    async getData () {
-      const obj: any = this.$rest
-      const data = await obj.index.getIndexInfo(this.params)
-      this.list = data.data
-    }
+    // async getData () {
+    //   const obj: any = this.$rest
+    //   const data = await obj.index.getIndexInfo(this.params)
+    //   this.list = data.data
+    // }
   }
 </script>

@@ -1,6 +1,6 @@
 <script lang="tsx">
-  import { CreateElement } from 'vue'
-  import { Vue, Component } from 'vue-property-decorator'
+  import Vue, { CreateElement} from 'vue'
+  import Component from 'vue-class-component'
 
   @Component
   export default class Login extends Vue {
