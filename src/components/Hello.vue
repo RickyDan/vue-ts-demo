@@ -5,6 +5,7 @@
         <h4>{{ item.title }}</h4>
       </li>
     </ul>
+    <p>{{ params.tab }}</p>
     <el-date-picker
       v-model="date"
       type="date"
