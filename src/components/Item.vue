@@ -27,7 +27,7 @@ import Component from 'vue-class-component'
 })
 export default class Item extends Vue {
   msg: string = '组件'
-  date: string = ''
+  private date: string = ''
   list: Array<string> = []
   params: Object = {
     limit: 10,

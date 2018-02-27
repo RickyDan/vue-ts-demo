@@ -3,8 +3,11 @@ import cookie from './cookie'
 
 class Ajax {
   constructor (options) {
-    this.baseUrl = 'https://cnodejs.org/api/v1'
+    this.baseUrl = options && options.baseUrl ? options.baseUrl : 'replacing_api'
+    this.authUrl = options && options.authUrl ? options.authUrl : 'replacing_auth'
+    this.$store = null
     this.$http = axios
+    this.isLogin = false
     this.queryMap = {}
     this.createMap = {}
     this.putWayMap = {}
@@ -12,6 +15,7 @@ class Ajax {
     this.deleteMap = {}
     // 正在登陆
     this.logining = false
+    this.next = ''
     // 输出提示
     this.showTips = (tips) => {
       if (window.console) {

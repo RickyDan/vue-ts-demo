@@ -1,5 +1,3 @@
-import {unescape} from 'querystring'
-
 export default {
   getCookie (name) {
     let c = document.cookie
