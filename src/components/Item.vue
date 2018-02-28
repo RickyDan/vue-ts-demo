@@ -38,8 +38,7 @@ export default class Item extends Vue {
     this.getData()
   }
   async getData () {
-    const obj: any = this.$rest
-    const data = await obj.index.getIndexInfo(this.params)
+    const data = await this.$rest.index.getIndexInfo(this.params)
     this.list = data.data
   }
 }

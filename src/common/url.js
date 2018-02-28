@@ -1,6 +1,10 @@
 export default {
-  getSearch (hash, searchs) {
-    hash = hash || window.localtion.hash
+  /**
+   * 获取 location.search和location.hash的值
+   * @returns [Object] 对象
+   */
+  getSearch(hash, searchs) {
+    hash = hash || window.location.hash
     let index = hash.indexOf('?')
     let o = {}
     let item

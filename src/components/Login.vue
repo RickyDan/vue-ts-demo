@@ -22,12 +22,18 @@
     }
     
     add (num1: number, num2: number): number {
-      console.log(num1 + num2)
-      return num1 + num2
+      return num1 * num2
     }
 
     created () {
-      console.log(this.$rest)
+      this.getData()
+    }
+
+    async getData () {
+      const res = await this.$rest.index.getIndexInfo()
+      if (res.code === 0) {
+        console.log(res.data)
+      }
     }
 
     showDialog () {

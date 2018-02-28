@@ -7,9 +7,16 @@ ajax.setTipFn((tips: string) => {
   Message.error(tips)
 })
 
+ajax.setSuccess(res => {
+  // 缓存用户权限
+  if (res.data && res.data.permissions) {
+    // store.commit('UPDATE_AUTHLIST', res.data.permissions)
+  }
+})
+
 const rest: Api = {
-  index : {
-    getIndexInfo: ajax.query('/topics')
+  index: {
+    getIndexInfo: ajax.query('/login')
   }
 }
 

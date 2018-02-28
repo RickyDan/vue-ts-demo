@@ -85,7 +85,7 @@ class Ajax {
     this.showTips = fn
   }
   // 设置自定义的回调
-  setSuccss (success) {
+  setSuccess (success) {
     this.success = success
   }
 
