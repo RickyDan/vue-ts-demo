@@ -14,7 +14,3 @@ declare module 'vue/types/options' {
     rest?: object
   }
 }
-
-declare module 'c-element-ui'
-declare module 'vue-lazyload'
-declare module 'vue-ueditor'

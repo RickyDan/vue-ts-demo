@@ -1,4 +1,4 @@
-import { Message } from 'element-ui'
+import { Message } from 'c-element-ui'
 export default {
   regexpMap: {
     regexp_mobile: /^1[3|4|5|7|8]\d{9}$/, // 手机校验

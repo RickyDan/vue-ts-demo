@@ -5,7 +5,7 @@ export default {
     component: () => import('../components/Login.vue')
   }, {
     path: '/index',
-    name: 'Hello',
-    component: () => import('../components/Index.vue')
+    name: 'Index',
+    component: () => import('../modules/Index.vue')
   }]
 }

@@ -22,9 +22,11 @@
 </template>
 
 <script lang="ts">
-  import Vue, { CreateElement } from 'vue'
+  import Vue from 'vue'
   import Component from 'vue-class-component'
-
+  declare interface Tab {
+    name: string
+  }
   @Component
   export default class Index extends Vue {
     params = {
@@ -38,7 +40,7 @@
       this.getData()
     }
     
-    handleClick (tab) {
+    handleClick (tab: Tab) {
       this.params.tab = tab.name
       this.getData()
     }

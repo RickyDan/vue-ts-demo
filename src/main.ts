@@ -3,8 +3,8 @@
 // 不要删除下面这一行，用来导入replacing_debug, import './debug'
 // replacing_debug
 import Vue from 'vue'
-import Element from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
+import Element from 'c-element-ui'
+import 'c-element-ui/lib/theme-default/index.css'
 import App from './App.vue'
 import router from './router'
 import rest from './rest'
