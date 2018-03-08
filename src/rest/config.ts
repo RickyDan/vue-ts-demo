@@ -2,10 +2,10 @@ import { Message } from 'c-element-ui'
 import ajax from '../common/ajax'
 import Api from '../interface/ApiInterface'
 
-declare interface Permissions {
+interface Permissions {
   permissions: Array<string>
 }
-declare interface Res {
+interface Res {
   data: Permissions
 }
 
@@ -24,7 +24,10 @@ ajax.setSuccess((res: Res) => {
 const rest: Api = {
   index: {
     getIndexInfo: ajax.query('/login'),
-    getCarSources: ajax.query('/car_sources')
+    getCarSources: ajax.query('/car_sources'),
+    getUsers: ajax.query('/user_list'),
+    getIntends: ajax.query('/intend_manage'),
+    getExchange: ajax.query('/intend_exchange')
   }
 }
 

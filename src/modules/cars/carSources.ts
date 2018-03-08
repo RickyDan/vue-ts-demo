@@ -22,6 +22,6 @@ interface SourceList {
 
 export interface Res {
   code: number
-  messaeg: string
+  message: string
   data: SourceList
 }

@@ -89,6 +89,10 @@ class Ajax {
     this.success = success
   }
 
+  setStore (store) {
+    this.$store = store
+  }
+
   parse (path, id) {
     if (typeof id === 'string') {
       return path + '/' + id

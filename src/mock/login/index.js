@@ -8,5 +8,7 @@ let mockSwitch = mock === 1 ? '' : '_'
 Mock.mock(/login/, 'get' + mockSwitch, {
   'code': 0,
   'message': 'ok',
-  'data': '登陆成功'
+  'data': {
+    name: 'Rick'
+  }
 })

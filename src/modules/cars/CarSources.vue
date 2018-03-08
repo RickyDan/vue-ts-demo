@@ -1,5 +1,13 @@
 <template>
-  <section>
+  <section id="car-sources" v-if="index === 'car'">
+    <header class="tit">
+      <h4>
+        车源管理 
+        <el-button icon="plus" class="plus">
+          新增
+        </el-button>
+      </h4>
+    </header>
     <el-form :model="queryParams" :inline="true">
       <el-form-item prop="time">
         <el-date-picker 
@@ -22,10 +30,10 @@
         <el-input v-model="queryParams.vin" placeholder="VIN"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button icon="el-icon-search">
-        </el-button>
-        <el-button icon="el-icon-refresh">
-        </el-button>
+        <i class="el-icon-search">
+        </i>
+        <i class="el-icon-update">
+        </i>
       </el-form-item>
     </el-form>
     <el-table
@@ -44,12 +52,13 @@
       </el-table-column>
       <el-table-column label="操作">
         <template slot-scope="scope">
-          <el-button type="text">查看</el-button>
+          <div><el-button type="text">查看</el-button></div>
+          <div><el-button type="text">编辑</el-button></div>
+          <div><el-button type="text">售出</el-button></div>
         </template>
       </el-table-column>
     </el-table>
     <el-pagination
-      background
       @current-change="handleCurrentChange"
       :page-sizes="[10, 20, 30, 40]"
       :page-size="10"
@@ -59,12 +68,15 @@
   </section>
 </template>
 <script lang="ts">
-import Vue from 'vue'
-import Component from 'vue-class-component'
+import { Component, Vue, Prop } from 'vue-property-decorator'
+import { Message } from 'c-element-ui'
 import { Params, Res } from './carSources'
 
 @Component
 export default class CarSources extends Vue {
+  @Prop({ type: String, required: true })
+  index: string
+
   params: Params = {
     start_time: '',
     status: 1,
@@ -96,11 +108,18 @@ export default class CarSources extends Vue {
   }
 
   async getData () {
-    console.log(this.params.per_page)
     const res: Res = await this.$rest.index.getCarSources()
     if (res.code === 0) {
       this.carData = res.data
+    } else {
+      Message.error(res.message)
     }
   }
 }
 </script>
+<style>
+  #car-sources .tit .el-button {
+    float: right;
+  }
+</style>
+

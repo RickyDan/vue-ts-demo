@@ -70,6 +70,8 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.31",
     "karma-webpack": "^2.0.2",
+    "less": "^3.0.1",
+    "less-loader": "^4.0.6",
     "mocha": "^3.2.0",
     "mockjs": "^1.0.1-beta3",
     "nightwatch": "^0.9.12",

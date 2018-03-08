@@ -5,6 +5,7 @@
 import Vue from 'vue'
 import Element from 'c-element-ui'
 import 'c-element-ui/lib/theme-default/index.css'
+import store from './vuex/store'
 import App from './App.vue'
 import router from './router'
 import rest from './rest'
@@ -17,6 +18,7 @@ const app = new Vue({
   el: '#app',
   router,
   rest,
+  store,
   template: '<App/>',
   components: { App }
 })
