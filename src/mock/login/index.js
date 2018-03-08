@@ -9,6 +9,7 @@ Mock.mock(/login/, 'get' + mockSwitch, {
   'code': 0,
   'message': 'ok',
   'data': {
-    name: 'Rick'
+    name: 'Rick',
+    loginStatus: true
   }
 })

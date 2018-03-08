@@ -1,5 +1,8 @@
 export default {
   routes: [{
+    path: '/',
+    redirect: '/login'
+  }, {
     path: '/login',
     name: 'Login',
     component: () => import('../components/Login.vue')
