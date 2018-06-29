@@ -1,11 +1,14 @@
 export default {
   routes: [{
+    path: '/',
+    redirect: '/login'
+  }, {
     path: '/login',
     name: 'Login',
-    component: () => import('../components/Login.vue')
+    component: () => import('../modules/login/Login.vue')
   }, {
-    path: '/index',
-    name: 'Hello',
-    component: () => import('../components/Index.vue')
+    path: '/orders/index',
+    name: 'Orders',
+    component: () => import('../modules/home/Orders.vue')
   }]
 }

@@ -16,7 +16,10 @@ ajax.setSuccess(res => {
 
 const rest: Api = {
   index: {
-    getIndexInfo: ajax.query('/login')
+    getIndexInfo: ajax.create('/login')
+  },
+  orders: {
+    getOrderList: ajax.query('/order/index')
   }
 }
 

@@ -4,11 +4,6 @@
   </div>
 </template>
 
-<script>
-export default {
-}
-</script>
-
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -17,5 +12,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+html, body {
+  background: #ebedf1;
 }
 </style>

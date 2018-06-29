@@ -5,8 +5,13 @@ import cache from '../../common/cache'
 let mock = cache.getSessionData('mock')
 let mockSwitch = mock === 1 ? '' : '_'
 
-Mock.mock(/login/, 'get' + mockSwitch, {
+Mock.mock(/login/, 'post' + mockSwitch, {
+  'code': 0,
+  'message': 'ok'
+})
+
+Mock.mock('/logout', 'get' + mockSwitch, {
   'code': 0,
   'message': 'ok',
-  'data': '登陆成功'
+  'data': '成功登出'
 })
